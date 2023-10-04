@@ -77,14 +77,9 @@ var MORSE_CODE = {
 inputStr = '.... . -.--   .--- ..- -.. .'
 
 decodeMorse = function(morseCode){
-
     let letters = morseCode.split(' ')
-
     decodedLetters = letters.map((m) => (MORSE_CODE[m] ? MORSE_CODE[m] : ' '))
- 
     return decodedLetters.join('').trim().split(/[\s,\t,\n]+/).join(' ');
-    
-    // You can use MORSE_CODE[morse]
 }
 
 console.log(decodeMorse(inputStr))
